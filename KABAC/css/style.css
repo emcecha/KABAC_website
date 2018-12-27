@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&subset=latin-ext');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* body {
+    background-image: linear-gradient(to right, transparent 80%, white), url("../images/rust.jpg");
+} */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex-container-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main navigation bar */
+
+.menu {
+    background-color: black;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8); */
+}
+
+.menu__list {
+    list-style: none;
+    height: 100%;
+}
+
+.menu__item {
+    height: 100%;
+    width: 125px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.menu__item:hover .menu__sublist {
+    display: block;
+}
+
+.menu__link {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    transition: all 0.1s;
+}
+
+.menu__link:hover {
+    color: black;
+    background-color: white;
+}
+
+.menu__sublist {
+    list-style: none;
+    background-color: white;
+    height: auto;
+    width: 300%;
+    padding: 3% 0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+}
+
+.menu__sublist::after {
+    content: "";
+    width: calc(100% / 3);
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    top: -5px;
+    left: 0;
+}
+
+.menu__subitem {
+    padding: 3% 0 3% 3%;
+}
+
+.menu__sublink {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    transition: all 0.1s;
+}
+
+.menu__sublink:hover {
+    padding: 3%;
+    color: #ED7D31;
+    font-weight: bold;
+}
+
+/* /Main navigation bar */
+
+
+/* Wide images and logo */
+
+.wide-imgs {
+    height: 400px;
+    background-image: url("../images/rust2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wide-imgs__container {
+    height: 100%;
+}
+
+.wide-imgs__logobox {
+    height: 100%;
+    width: 20%;
+    background-color: white;
+}
+
+.wide-imgs__logolink {
+    width: 65%;
+    transition: all 0.2s;
+}
+
+.wide-imgs__logolink:hover {
+    transform: rotate(45deg);
+}
+
+/* /Wide images and logo */
+
+
+/* Welcome section */
+
+.welcome__header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 3% 3%;
+}
+
+.welcome__text {
+    font-size: 1.6rem;
+    font-style: italic;
+    max-width: 800px;
+    align-self: flex-end;
+    padding: 0 3% 3% 0;
+    margin-left: 3%;
+}
+
+/* /Welcome section */
+
+
+/* Last projects */
+
+.projects__header {
+    padding: 3% 3%;
+}
+
+.projects__line {
+    flex-grow: 1;
+    border-top: 1px solid #ED7D31;
+}
+
+.projects__header-text {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 3%;
+}
+
+.projects__box {
+    justify-content: space-around;
+}
+
+.projects__item {
+    flex-basis: calc(90% / 3);
+    margin: 3% ;
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.projects__item:hover {
+    transform: scale(1.1);
+    background-color: #346C8A;
+    color: white;
+    box-shadow: 0 5px 40px 8px rgba(0,0,0,0.4);
+}
+
+.projects__img-box {
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+    border: 8px solid #346C8A;
+    overflow: hidden;
+    align-self: center;
+    margin-bottom: 3%;
+}
+
+.projects__item-title {
+    font-weight: bold;
+    font-size: 2rem;
+    align-self: center;
+    padding: 3% 0;
+}
+
+.projects__item-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    padding: 0% 6% 6% 6%;
+}
+
+/* /Last projects */
+
+
+/* About us */
+
+.about-us {
+    background-color: #ED7D31;
+}
+
+.welcome--about-us {
+    color: white;
+}
+
+/* /About us */
+
+
+/* Main footer */
+
+.main-footer {
+    background-color: #346C8A;
+    height: 60px;
+}
+
+.main-footer__container {
+    justify-content: space-between;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.main-footer__logo-rights {
+    height: 60px;
+    padding: 0 3%;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.main-footer__logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 3px;
+}
+
+.main-footer__design {
+    padding: 0 3%;
+    width: 50%;
+    text-align: right;
+}
+
+/* /Main footer */
